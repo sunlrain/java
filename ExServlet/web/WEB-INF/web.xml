@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the description of my J2EE component</display-name>
+        <servlet-name>ServletForm</servlet-name>
+        <servlet-class>org.kevin.servlet.ServletForm</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletForm</servlet-name>
+        <url-pattern>/Servlet/ServletForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletRequestHeader</servlet-name>
+        <servlet-class>org.kevin.servlet.ServletRequestHeader</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletRequestHeader</servlet-name>
+        <url-pattern>/Servlet/ServletRequestHeader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletResponseHeader</servlet-name>
+        <servlet-class>org.kevin.servlet.ServletResponseHeader</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletResponseHeader</servlet-name>
+        <url-pattern>/Servlet/ServletResponseHeader</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ServletCookie</servlet-name>
+        <servlet-class>org.kevin.servlet.ServletCookie</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletCookie</servlet-name>
+        <url-pattern>/Servlet/ServletCookie</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ServletSession</servlet-name>
+        <servlet-class>org.kevin.servlet.ServletSession</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletSession</servlet-name>
+        <url-pattern>/Servlet/ServletSession</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>myfilter</filter-name>
+        <filter-class>org.kevin.servlet.FilterServlet</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>myfilter</filter-name>
+        <!--当前工程下的任何资源都匹配，都会走filter-->
+        <url-pattern>/*</url-pattern>
+        <!--调用admin目录下的资源才会走filter-->
+        <!--<url-pattern>/*</url-pattern>-->
+    </filter-mapping>
+
+    <listener>
+        <listener-class>org.kevin.servlet.ListenerServlet</listener-class>
+    </listener>
+
+</web-app>
