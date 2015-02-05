@@ -1,4 +1,4 @@
 java
 ====
 
-JAVA Learning and Summary
+JAVA Summary
